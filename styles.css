@@ -1,21 +1,52 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .background {
-    display: flex;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 40px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: palevioletred;
-    background-color: white;
-    height: 100vh;
-  }
+.background {
+  display: flex;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: palevioletred;
+  background-color: white;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
 
-  .background-active {
-    background-color: black;
+.background-active {
+  background-color: black;
+}
+
+.star-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: max(200px, 20vw);
+  color: white;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.5;
+  line-height: 1.3em;
+  animation-name: stars;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0.5;
   }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
