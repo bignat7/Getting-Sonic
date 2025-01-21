@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .background {
+    display: flex;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: palevioletred;
+    background-color: white;
+    height: 100vh;
+  }
+
+  .background-active {
+    background-color: black;
+  }
